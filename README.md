@@ -102,7 +102,7 @@ Other daily information:
 
 ### Live Sun Position
 
-School holidays information:  
+Live sun information published every minutes:  
 * `{prefix}/sunposition/elevation`: 0-90, Indicates the angle of the sun measured from the horizon
 * `{prefix}/sunposition/azimuth`: 0-360, The azimuth angle is the compass direction from which the sunlight is coming
 * `{prefix}/sunposition/daytime`: 0 or 1, indicates if sun is in the sky (between sunrise and sunset)
