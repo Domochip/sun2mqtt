@@ -184,7 +184,7 @@ $lastDailyPublishTime = time();
 $lastMinutePublishTime = time();
 
 //DEBUG
-$lastDailyPublishTime = strtotime('last month');
+// $lastDailyPublishTime = strtotime('last month');
 
 $loopEventHandler = function (MqttClient $mqtt, float $elapsedTime) use ($publishHour, &$lastDailyPublishTime, &$lastMinutePublishTime, $mqttprefix, $latitude, $longitude) {
     $now = time();
