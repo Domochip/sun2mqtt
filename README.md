@@ -80,7 +80,7 @@ services:
 
 ### Sunrise
 
-Sunrise information: time formatted as "mmss" (2 hours digits followed by 2 minutes digits)  
+Sunrise information: time formatted as "hhmm" (2 hours digits followed by 2 minutes digits)  
 * `{prefix}/sun/astronomicsunrise`: Astronomic sunrise
 * `{prefix}/sun/nauticsunrise`: Nautic Sunrise
 * `{prefix}/sun/civilsunrise`: Civil sunrise
@@ -88,7 +88,7 @@ Sunrise information: time formatted as "mmss" (2 hours digits followed by 2 minu
 
 ### Sunset
 
-Sunset information: time formatted as "mmss" (2 hours digits followed by 2 minutes digits)  
+Sunset information: time formatted as "hhmm" (2 hours digits followed by 2 minutes digits)  
 * `{prefix}/sun/sunset`: Sunset
 * `{prefix}/sun/civilsunset`: Civil sunset
 * `{prefix}/sun/nauticsunset`: Nautic sunset
@@ -97,7 +97,7 @@ Sunset information: time formatted as "mmss" (2 hours digits followed by 2 minut
 ### Other daily infos
 
 Other daily information:  
-* `{prefix}/sun/transit`: time formatted as "mmss" (2 hours digits followed by 2 minutes digits), time when the sun is at its higher position
+* `{prefix}/sun/transit`: time formatted as "hhmm" (2 hours digits followed by 2 minutes digits), time when the sun is at its higher position
 * `{prefix}/sun/daylength`: daylength in minutes (time between sunrise and sunset)
 
 ### Live Sun Position
