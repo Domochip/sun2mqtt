@@ -118,7 +118,7 @@ function publishSunPosition(MqttClient $mqtt, $prefix, $latitude, $longitude) {
 //------------------------------- MAIN -------------------------------
 //--------------------------------------------------------------------
 
-$versionnumber='1.0.1';
+$versionnumber='1.0.2';
 
 echo sprintf('===== sun2mqtt v%s =====',$versionnumber).PHP_EOL;
 
@@ -184,7 +184,7 @@ $lastDailyPublishTime = time();
 $lastMinutePublishTime = time();
 
 //DEBUG
-// $lastDailyPublishTime = strtotime('last month');
+$lastDailyPublishTime = strtotime('last month');
 
 $loopEventHandler = function (MqttClient $mqtt, float $elapsedTime) use ($publishHour, &$lastDailyPublishTime, &$lastMinutePublishTime, $mqttprefix, $latitude, $longitude) {
     $now = time();
