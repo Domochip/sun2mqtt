@@ -216,9 +216,20 @@ $loopEventHandler = function (MqttClient $mqtt, float $elapsedTime) use ($publis
 
 $mqtt->registerLoopEventHandler($loopEventHandler);
 
-$mqtt->subscribe('php-mqtt/client/test', function ($topic, $message) {
+$mqtt->subscribe($mqttprefix.'/action', function ($topic, $message) use (&$lastDailyPublishTime, &$lastMinutePublishTime, $mqtt, $mqttprefix, $latitude, $longitude) {
+    if ($message != 'refresh') return;
+    logger('Forced Refresh');
+    publish($mqtt, $mqttprefix.'/executionTime', date(DATE_ATOM));
+    publishSunriseSunset($mqtt, $mqttprefix, $latitude, $longitude);
+    $lastDailyPublishTime = $todayPublishHour;
+    publishSunPosition($mqtt, $mqttprefix, $latitude, $longitude);
+    $lastMinutePublishTime = $currentPublishMinute;
+}, 0);
+
+$mqtt->subscribe($mqttprefix.'/client/test', function ($topic, $message) {
     echo sprintf("Received message on topic [%s]: %s", $topic, $message).PHP_EOL;
 }, 0);
+
 $mqtt->loop(true);
 $mqtt->disconnect();
 
