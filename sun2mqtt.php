@@ -130,11 +130,11 @@ $publishHour = $_ENV["PUBLISHHOUR"] ?? 3;
 
 
 $mqttprefix = $_ENV["PREFIX"] ?? "sun2mqtt";
-$mqtthost = $_ENV["HOST"];
+$mqtthost = $_ENV["HOST"] ?? "127.0.0.1";
 $mqttport = $_ENV["PORT"] ?? 1883;
 $mqttclientid = $_ENV["CLIENTID"] ?? "sun2mqtt";
-$mqttuser = $_ENV["USER"];
-$mqttpassword = $_ENV["PASSWORD"];
+$mqttuser = $_ENV["USER"] ?? null;
+$mqttpassword = $_ENV["PASSWORD"] ?? null;
 
 //Set up Timzezone for date/time php functions
 if (!date_default_timezone_set($timezone)){
