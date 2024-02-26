@@ -118,7 +118,7 @@ function publishSunPosition(MqttClient $mqtt, $prefix, $latitude, $longitude) {
 //------------------------------- MAIN -------------------------------
 //--------------------------------------------------------------------
 
-$versionnumber='1.0.2';
+$versionnumber='1.1.0';
 
 echo sprintf('===== sun2mqtt v%s =====',$versionnumber).PHP_EOL;
 
