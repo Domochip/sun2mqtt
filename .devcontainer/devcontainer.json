@@ -1,0 +1,8 @@
+{
+	"name": "sun2mqtt",
+	"dockerComposeFile": "docker-compose.yml",
+	"service": "sun2mqtt",
+	"workspaceFolder": "/app",
+	"postCreateCommand": "composer update",
+	"forwardPorts": [1883]
+}
