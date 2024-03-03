@@ -4,5 +4,6 @@
 	"service": "sun2mqtt",
 	"workspaceFolder": "/app",
 	"postCreateCommand": "composer update",
+	"postStartCommand": "git config --global --add safe.directory ${containerWorkspaceFolder}", // to avoid Git unsafe directory warning
 	"forwardPorts": [1883]
 }
