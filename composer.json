@@ -1,5 +1,5 @@
 {
     "require": {
-        "php-mqtt/client": "v2.0.0"
+        "php-mqtt/client": "v2.1.0"
     }
 }
